@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical" >
+
+	<RelativeLayout
+		android:id="@+id/clientLayout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5dip"
+		android:orientation="vertical" >
+
+		<TextView
+			android:id="@+id/clientTextView"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:text="@string/app_title"
+			android:textAppearance="@android:style/TextAppearance"
+			android:textSize="30sp"
+			android:textStyle="bold"
+			android:typeface="monospace" />
+
+		<RelativeLayout
+			android:id="@+id/connectLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/clientTextView"
+			android:orientation="horizontal" >
+
+			<Button
+				android:id="@+id/StartConnect"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:text="@string/btnCon" />
+
+			<EditText
+				android:id="@+id/IPText"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:layout_toLeftOf="@+id/StartConnect"
+				android:hint="@string/edittextIp" />
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:id="@+id/connectSendLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/connectLayout"
+			android:orientation="horizontal" >
+
+			<Button
+				android:id="@+id/SendButtonClient"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:text="@string/btnSend" />
+
+			<EditText
+				android:id="@+id/clientMessageText"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:layout_toLeftOf="@+id/SendButtonClient"
+				android:hint="@string/edittextMsg" />
+		</RelativeLayout>
+	</RelativeLayout>
+
+	<RelativeLayout
+		android:id="@+id/clientControl"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/clientLayout"
+		android:orientation="vertical" >
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical" >
+
+			<Button
+				android:id="@+id/searchServer"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/btnSearch" />
+
+			<Button
+				android:id="@+id/openLight"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/btnOpenLight" />
+
+			<Button
+				android:id="@+id/closeLight"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/btnCloseLight" />
+			<LinearLayout 
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				>
+				<TextView 
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:id="@+id/temp_textView"
+					android:layout_weight="1"
+					android:text="@string/textviewTemp"/>
+				<TextView 
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:id="@+id/humi_textView"
+					android:layout_weight="1"
+					android:hint="@string/textviewHumi"/>
+			</LinearLayout>
+		</LinearLayout>
+	</RelativeLayout>
+
+	<RelativeLayout
+		android:id="@+id/StatusArea"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/clientControl"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="5dip"
+		android:orientation="vertical" >
+		<LinearLayout 
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:orientation="horizontal" 
+				android:layout_weight="1">
+
+			<smart.home.MyCurveView 
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/curve_temp"
+			android:layout_weight="1"
+			android:background="@drawable/curveview_bg" />
+			<smart.home.MyCurveView 
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/curve_humi"
+			android:layout_weight="1"
+			android:background="@drawable/curveview_bg" />
+		</LinearLayout>
+		<LinearLayout 
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1">
+			<TextView
+			android:id="@+id/RecvText"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:text="信息：\n" />
+		</LinearLayout>
+		</LinearLayout>
+		
+		
+	</RelativeLayout>
+
+</RelativeLayout>

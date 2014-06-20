@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">SmartLife</string>
+    <string name="app_name">SmartHome</string>
+    <string name="app_title">智能家庭客户端</string>
+    <string name="btnCon">连接</string>
+    <string name="btnSend">发送消息</string>
+	 <string name="edittextIp">请输入IP</string>
+	 <string name="edittextMsg">请输入信息</string>
+ 	<string name="btnSearch">查找服务器</string>
+    <string name="btnOpenLight">开灯</string>
+	 <string name="btnCloseLight">关灯</string>
+    <string name="textviewTemp">温度：</string>
+    <string name="textviewHumi">湿度：</string>
+     
+    
+</resources>

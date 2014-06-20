@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>image/beijin.jpg</file>
+    </qresource>
+</RCC>
